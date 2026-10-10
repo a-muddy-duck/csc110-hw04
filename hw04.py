@@ -38,7 +38,7 @@ def check_greater():
 
 # Task 3
 def get_special_numbers():
-    """ Add your docstring """
+    """ print numbers from 1-40 that are odd, multiples of 3, and not multiples of 5 """
     for number in range(41):
         if number % 2 != 0: # continue if odd
             if number % 3 == 0: # continue if a multiple of 3
@@ -49,8 +49,23 @@ def get_special_numbers():
 
 # Task 4.a
 def my_for_loop():
-    """ Add your docstring """
-    pass
+    """ determine if each letter in a word is a consonant or vowel """
+    
+    gimme = input("Give me a little word: ")
+    chars = len(gimme)
+    if 2 <= chars <= 5 and " " not in gimme: # continue if the correct length
+        
+        for chars in range(len(gimme)):
+            if gimme[chars] == "a" or gimme[chars] == "e" or gimme[chars] == "i" or gimme[chars] == "o" or gimme[chars] == "u":
+                print(f"{gimme[chars]} is a vowel")
+            else:
+                print(f"{gimme[chars]} is a consonant")
+            chars = chars - 1
+
+    else: # end if too short, too long, or has a space
+        return
+        
+        
 
 # Task 4.b
 def my_while_loop():
