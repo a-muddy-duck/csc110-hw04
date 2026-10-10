@@ -63,6 +63,7 @@ def my_for_loop():
             chars = chars - 1
 
     else: # end if too short, too long, or has a space
+        print("bad word")
         return
         
         
@@ -70,7 +71,17 @@ def my_for_loop():
 # Task 4.b
 def my_while_loop():
     """ Add your docstring """
-    pass
+    choice = input("Choose option a, b, or c: ")
+    if "a" in choice:
+        my_while_loop()
+    if "b" in choice:
+        print("Goodbye")
+        return
+    if "c" in choice:
+        sys.exit()
+    elif choice != "a" or choice != "b" or choice != "c":
+        print("try again")
+        my_while_loop()
 
 # ---------------------------------------
 # Do not modify anything below this line
