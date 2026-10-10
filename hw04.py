@@ -9,7 +9,7 @@ secret_word = "cupcake"
 
 # Task 1
 def check_text():
-    """ Add your docstring """
+    """ ask for a sentence, determine if it has cupcake or dog in it """
     sent = input("Give me a sentence: ")
     if secret_word in sent:
         print("You used the secret word!")    
@@ -23,15 +23,28 @@ def check_text():
 
 # Task 2
 def check_greater():
-    """ Add your docstring """
-    pass
+    """ compare magnitude of two integers """
+    num1 = int(input("Give me a number: "))
+    num2 = int(input("Give me another number: "))
+    if num1 < num2:
+        print("Second is Greater.")
+    elif num1 > num2:
+        print("First is Greater.")
+    else: # nums are equal
+        print("Try again.")
+        check_greater()
 
 
 
 # Task 3
 def get_special_numbers():
     """ Add your docstring """
-    pass
+    for number in range(41):
+        if number % 2 != 0: # continue if odd
+            if number % 3 == 0: # continue if a multiple of 3
+                if number % 5 != 0: # continue if not a multiple of 5
+                    print(number)
+                
 
 
 # Task 4.a
