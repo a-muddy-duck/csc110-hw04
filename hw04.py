@@ -1,16 +1,23 @@
 # ------------------------------------------------------
-#        Name: (put your name here)
+#        Name: Ash Rulifson
 #       Peers: (add any collaborators)
 #  References: (anything you checked to solve this)
 # ------------------------------------------------------
 import sys
 
-secret_word = "food"
+secret_word = "cupcake"
 
 # Task 1
 def check_text():
     """ Add your docstring """
-    pass
+    sent = input("Give me a sentence: ")
+    if secret_word in sent:
+        print("You used the secret word!")    
+    elif "dog" not in sent:
+        print("Try again.")
+        check_text()
+    if "dog" in sent:
+        print('''You used the word \"dog\" or the word \"Dog\"!''')
 
 
 
