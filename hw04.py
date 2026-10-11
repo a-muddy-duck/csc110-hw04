@@ -73,15 +73,14 @@ def my_while_loop():
     """ Add your docstring """
     choice = input("Choose option a, b, or c: ")
     if "a" in choice:
-        my_while_loop()
+        return my_while_loop()
     if "b" in choice:
         print("Goodbye")
         return
-    if "c" in choice:
-        sys.exit()
-    elif choice != "a" or choice != "b" or choice != "c":
-        print("try again")
-        my_while_loop()
+    else:
+        if choice != "a" or choice != "b" or choice != "c":
+            print("try again")
+            return my_while_loop()
 
 # ---------------------------------------
 # Do not modify anything below this line
