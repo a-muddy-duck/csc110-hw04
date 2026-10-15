@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 #        Name: Ash Rulifson
-#       Peers: (add any collaborators)
-#  References: (anything you checked to solve this)
+#       Peers:
+#  References: Python Tutor
 # ------------------------------------------------------
 import sys
 
@@ -65,22 +65,22 @@ def my_for_loop():
     else: # end if too short, too long, or has a space
         print("bad word")
         return
-        
-        
 
 # Task 4.b
 def my_while_loop():
-    """ Add your docstring """
+    """ offer 3 options, either repeat, say goodbye, or ghost the user (exit) """
     choice = input("Choose option a, b, or c: ")
     if "a" in choice:
         return my_while_loop()
     if "b" in choice:
         print("Goodbye")
         return
+    elif "c" in choice:
+        sys.exit()
     else:
         if choice != "a" or choice != "b" or choice != "c":
             print("try again")
-            return my_while_loop()
+            my_while_loop()
 
 # ---------------------------------------
 # Do not modify anything below this line
